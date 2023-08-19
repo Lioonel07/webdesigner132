@@ -1,23 +1,185 @@
-.cards01{
-    justify-content: center !important;
-    text-align: center !important;
-    display: flex !important;
-}
-body{
-    background-image: url(https://lastfm.freetls.fastly.net/i/u/770x0/355979d102333364d2d433ce7180731d.jpg) !important;
-    background-position: center;
-    background-repeat: inherit;
-   
-}
-h1 {
-    color: #f5f5f5 !important;
-    text-align: center;
-}
-h2{
-font-size: medium !important;
-color: #f3f3f3 !important;
-text-align: justify;
-background-color: #0201235b;
-}
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
-
+*{
+    font-family: 'Oswald', sans-serif;
+    margin: 0%;
+}
+.nav {
+    height: 50px;
+    width: 100%;
+    background-color: #b31b1b;
+    position: relative;
+  }
+  
+  .nav > .nav-header {
+    display: inline;
+  }
+  
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 10px 10px 10px;
+  }
+  .nav > .nav-header > .nav-title .nav-g {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav > .nav-header > .nav-title img {
+    width: 40px;
+  }
+  
+  .nav > .nav-btn {
+    display: none;
+  }
+  
+  .nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+    padding: 0 10px;
+  }
+  
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+  }
+  
+  .nav > .nav-links > a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .nav > .nav-links > .nhover:hover {
+    background-color: transparent;
+  }
+  
+  .nav > #nav-check {
+    display: none;
+  }
+  
+  .hero{
+      /* background-color: rgba(137, 43, 226, 0.34); */
+      background-image: url(assets/duki-y-una-reflexion-rapeada___-VxBbPBEH_1256x620__1.webp);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 500px;
+  }
+  
+  .hero .hero_txt{
+      background-color: #ffffff56;
+      padding: 2% 4%;
+      justify-content: center;
+  }
+  
+  .galeria .galeria_img {
+      display: flex;
+      justify-content: space-around;
+  }
+  
+  .galeria .galeria_img img{
+      min-width: 300px;
+      max-width: 350px;
+  }
+  
+  .cards{
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .cards .cards_txt{
+      text-align: center;
+  }
+  
+  .cards .cards-card{
+      display: flex;
+      justify-content: space-around;
+  }
+  
+  .cards h2{
+      margin: 4% 0;
+  }
+  
+  .cards .card{
+      border: 1px solid #000;
+      width: 300px;
+  }
+  
+  .cards .card img{
+      width: 100%;
+  }
+  
+  
+  
+  
+  
+  
+  @media only screen and (max-width: 768px) {
+    .nav {
+      position: inherit;
+    }
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,
+    .nav #nav-check:checked ~ .nav-btn > label {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #333;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+      margin-left: -6%;
+      text-align: center;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+  
+    .galeria{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .galeria .galeria_img{
+      flex-direction: column;
+      align-items: center;
+    }
+    .galeria .galeria_img img{
+      width: 90%;
+    }
+  }
+  
