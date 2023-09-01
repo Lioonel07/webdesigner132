@@ -1,0 +1,13 @@
+.row.galeria{
+    text-align: -webkit-center !important;
+}
+
+@media only screen and (max-widt: 720px) {
+    .galeria img {
+        width: 100px !important;
+    }
+}
+
+.row.cards {
+    justify-content: center !important;
+}
